@@ -1,5 +1,5 @@
 //
-//  SplashReducer.swift
+//  HomeReducer.swift
 //  TCA-Demo
 //
 //  Created by Telem Tobi on 09/02/2024.
@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-struct SplashReducer {
+struct HomeReducer {
     
     @ObservableState
     struct State: Equatable {
@@ -17,21 +17,16 @@ struct SplashReducer {
     }
     
     enum Action {
-        case onAppear
-        case splashCompleted
+        case onTransferTap
+        case onRequestTap
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case .onAppear:
-                return .run { send in
-                    try? await Task.sleep(for: .seconds(2))
-                    await send(.splashCompleted)
-                }
-                
+
             // MARK: Navigation actions
-            case .splashCompleted:
+            case .onTransferTap, .onRequestTap:
                 return .none
             }
         }

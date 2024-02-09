@@ -1,5 +1,5 @@
 //
-//  RootContentView.swift
+//  RootNavigatorView.swift
 //  TCA-Demo
 //
 //  Created by Telem Tobi on 09/02/2024.
@@ -16,14 +16,15 @@ extension RootNavigator {
         var body: some View {
             switch store.presentation {
             case .splash:
-                store.scope(state: \.presentation.splash,action: \.presentation.splash)
+                store.scope(state: \.presentation.splash, action: \.presentation.splash)
                     .map(SplashView.init)
                 
             case .login:
                 EmptyView()
                 
             case .home:
-                EmptyView()
+                store.scope(state: \.presentation.home, action: \.presentation.home)
+                    .map(HomeNavigator.ContentView.init)
             }
         }
     }
