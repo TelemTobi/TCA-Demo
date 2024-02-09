@@ -14,7 +14,17 @@ extension RootNavigator {
         let store: StoreOf<RootNavigator>
         
         var body: some View {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            switch store.presentation {
+            case .splash:
+                store.scope(state: \.presentation.splash,action: \.presentation.splash)
+                    .map(SplashView.init)
+                
+            case .login:
+                EmptyView()
+                
+            case .home:
+                EmptyView()
+            }
         }
     }
 }

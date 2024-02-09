@@ -13,11 +13,11 @@ struct RootNavigator {
     
     @ObservableState
     struct State: Equatable {
-        @Presents var presentation: Presentation.State = .splash
+        var presentation: Presentation.State = .splash(SplashReducer.State())
     }
     
     enum Action {
-        case presentation(PresentationAction<Presentation.Action>)
+        case presentation(Presentation.Action)
     }
     
     var body: some ReducerOf<Self> {
@@ -37,19 +37,19 @@ extension RootNavigator {
         
         @ObservableState
         enum State: Equatable {
-            case splash
+            case splash(SplashReducer.State)
             case login
             case home
         }
         
         enum Action {
-            case splash
+            case splash(SplashReducer.Action)
             case login
             case home
         }
         
         var body: some ReducerOf<Self> {
-            
+            Scope(state: \.splash, action: \.splash, child: SplashReducer.init)
         }
     }
 }
