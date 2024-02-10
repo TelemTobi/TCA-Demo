@@ -25,6 +25,7 @@
 		7D11E4D42B775C26008FDDDA /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CD2B775C26008FDDDA /* AmountView.swift */; };
 		7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CF2B775C26008FDDDA /* ReasonView.swift */; };
 		7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */; };
+		7D11E4D92B775CA3008FDDDA /* ThemeColorEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7D11E4CD2B775C26008FDDDA /* AmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		7D11E4CF2B775C26008FDDDA /* ReasonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
 		7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonReducer.swift; sourceTree = "<group>"; };
+		7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7D11E4AA2B7660FB008FDDDA /* App */,
 				7D11E4AD2B766140008FDDDA /* Navigators */,
 				7D11E4AC2B76613A008FDDDA /* Modules */,
+				7D11E4D72B775C7F008FDDDA /* Utility */,
 				7D11E4AB2B766127008FDDDA /* Resources */,
 			);
 			path = "TCA-Demo";
@@ -196,6 +199,22 @@
 			path = Reason;
 			sourceTree = "<group>";
 		};
+		7D11E4D72B775C7F008FDDDA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4DA2B775CB0008FDDDA /* Environments */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		7D11E4DA2B775CB0008FDDDA /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +304,7 @@
 				7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */,
 				7D11E4BD2B766E86008FDDDA /* HomeNavigator.swift in Sources */,
 				7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */,
+				7D11E4D92B775CA3008FDDDA /* ThemeColorEnvironment.swift in Sources */,
 				7D11E4B32B766233008FDDDA /* RootNavigator.swift in Sources */,
 				7D11E4C42B7676B6008FDDDA /* HomeReducer.swift in Sources */,
 			);
