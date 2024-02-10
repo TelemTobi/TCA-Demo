@@ -32,14 +32,17 @@ struct HomeView: View {
         }
         .bold()
         .buttonStyle(.borderedProminent)
+        .navigationTitle("Home")
     }
 }
 
 #Preview {
-    HomeView(
-        store: .init(
-            initialState: HomeReducer.State(),
-            reducer: HomeReducer.init
+    NavigationStack {
+        HomeView(
+            store: .init(
+                initialState: HomeReducer.State(),
+                reducer: HomeReducer.init
+            )
         )
-    )
+    }
 }

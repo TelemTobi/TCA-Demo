@@ -19,6 +19,12 @@
 		7D11E4BF2B766E8D008FDDDA /* HomeNavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4BE2B766E8D008FDDDA /* HomeNavigatorView.swift */; };
 		7D11E4C22B7676B0008FDDDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4C12B7676B0008FDDDA /* HomeView.swift */; };
 		7D11E4C42B7676B6008FDDDA /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4C32B7676B6008FDDDA /* HomeReducer.swift */; };
+		7D11E4D12B775C26008FDDDA /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4C92B775C26008FDDDA /* ContactsView.swift */; };
+		7D11E4D22B775C26008FDDDA /* ContactsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CA2B775C26008FDDDA /* ContactsReducer.swift */; };
+		7D11E4D32B775C26008FDDDA /* AmountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CC2B775C26008FDDDA /* AmountReducer.swift */; };
+		7D11E4D42B775C26008FDDDA /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CD2B775C26008FDDDA /* AmountView.swift */; };
+		7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CF2B775C26008FDDDA /* ReasonView.swift */; };
+		7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		7D11E4BE2B766E8D008FDDDA /* HomeNavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigatorView.swift; sourceTree = "<group>"; };
 		7D11E4C12B7676B0008FDDDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D11E4C32B7676B6008FDDDA /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		7D11E4C92B775C26008FDDDA /* ContactsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		7D11E4CA2B775C26008FDDDA /* ContactsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsReducer.swift; sourceTree = "<group>"; };
+		7D11E4CC2B775C26008FDDDA /* AmountReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountReducer.swift; sourceTree = "<group>"; };
+		7D11E4CD2B775C26008FDDDA /* AmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		7D11E4CF2B775C26008FDDDA /* ReasonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
+		7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,9 @@
 			children = (
 				7D11E4B62B7668D0008FDDDA /* Splash */,
 				7D11E4C02B7676A4008FDDDA /* Home */,
+				7D11E4C82B775C26008FDDDA /* Contacts */,
+				7D11E4CB2B775C26008FDDDA /* Amount */,
+				7D11E4CE2B775C26008FDDDA /* Reason */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -152,6 +167,33 @@
 				7D11E4C32B7676B6008FDDDA /* HomeReducer.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7D11E4C82B775C26008FDDDA /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4C92B775C26008FDDDA /* ContactsView.swift */,
+				7D11E4CA2B775C26008FDDDA /* ContactsReducer.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		7D11E4CB2B775C26008FDDDA /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4CC2B775C26008FDDDA /* AmountReducer.swift */,
+				7D11E4CD2B775C26008FDDDA /* AmountView.swift */,
+			);
+			path = Amount;
+			sourceTree = "<group>";
+		};
+		7D11E4CE2B775C26008FDDDA /* Reason */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4CF2B775C26008FDDDA /* ReasonView.swift */,
+				7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */,
+			);
+			path = Reason;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +275,16 @@
 				7D11E49D2B765F47008FDDDA /* TCA_DemoApp.swift in Sources */,
 				7D11E4BA2B7668E4008FDDDA /* SplashReducer.swift in Sources */,
 				7D11E4B82B7668DB008FDDDA /* SplashView.swift in Sources */,
+				7D11E4D12B775C26008FDDDA /* ContactsView.swift in Sources */,
+				7D11E4D32B775C26008FDDDA /* AmountReducer.swift in Sources */,
+				7D11E4D42B775C26008FDDDA /* AmountView.swift in Sources */,
 				7D11E4BF2B766E8D008FDDDA /* HomeNavigatorView.swift in Sources */,
+				7D11E4D22B775C26008FDDDA /* ContactsReducer.swift in Sources */,
 				7D11E4B52B7662E3008FDDDA /* RootNavigatorView.swift in Sources */,
 				7D11E4C22B7676B0008FDDDA /* HomeView.swift in Sources */,
+				7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */,
 				7D11E4BD2B766E86008FDDDA /* HomeNavigator.swift in Sources */,
+				7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */,
 				7D11E4B32B766233008FDDDA /* RootNavigator.swift in Sources */,
 				7D11E4C42B7676B6008FDDDA /* HomeReducer.swift in Sources */,
 			);
