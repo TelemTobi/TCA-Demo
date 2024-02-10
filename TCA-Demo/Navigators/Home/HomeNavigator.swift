@@ -28,16 +28,19 @@ struct HomeNavigator {
         Reduce { state, action in
             switch action {
             case .root(.onTransferTap):
-                
+                state.destination = .transfer(TransferNavigator.State())
                 return .none
                 
             case .root(.onRequestTap):
-                
+                state.destination = .request(RequestNavigator.State())
                 return .none
                 
             case .root, .destination:
                 return .none
             }
+        }
+        .ifLet(\.$destination, action: \.destination) {
+            Destination()
         }
     }
 }
@@ -49,23 +52,18 @@ extension HomeNavigator {
         
         @ObservableState
         enum State: Equatable {
-//            case transfer(TransferNavigator.State)
-//            case request(RequestNavigator.State)
+            case transfer(TransferNavigator.State)
+            case request(RequestNavigator.State)
         }
         
         enum Action {
-//            case transfer(TransferNavigator.Action)
-//            case request(RequestNavigator.Action)
+            case transfer(TransferNavigator.Action)
+            case request(RequestNavigator.Action)
         }
         
         var body: some ReducerOf<Self> {
-            Reduce { state, action in
-                switch action {
-                    
-                }
-            }
-//            Scope(state: \.transfer, action: \.transfer, child: TransferNavigator.init)
-//            Scope(state: \.request, action: \.request, child: RequestNavigator.init)
+            Scope(state: \.transfer, action: \.transfer, child: TransferNavigator.init)
+            Scope(state: \.request, action: \.request, child: RequestNavigator.init)
         }
     }
 }

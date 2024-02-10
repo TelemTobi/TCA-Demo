@@ -26,6 +26,10 @@
 		7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4CF2B775C26008FDDDA /* ReasonView.swift */; };
 		7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */; };
 		7D11E4D92B775CA3008FDDDA /* ThemeColorEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */; };
+		7D11E4E12B775CE1008FDDDA /* RequestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4DC2B775CE1008FDDDA /* RequestNavigator.swift */; };
+		7D11E4E22B775CE1008FDDDA /* RequestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4DD2B775CE1008FDDDA /* RequestContentView.swift */; };
+		7D11E4E32B775CE1008FDDDA /* TransferContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4DF2B775CE1008FDDDA /* TransferContentView.swift */; };
+		7D11E4E42B775CE1008FDDDA /* TransferNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11E4E02B775CE1008FDDDA /* TransferNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		7D11E4CF2B775C26008FDDDA /* ReasonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
 		7D11E4D02B775C26008FDDDA /* ReasonReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonReducer.swift; sourceTree = "<group>"; };
 		7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorEnvironment.swift; sourceTree = "<group>"; };
+		7D11E4DC2B775CE1008FDDDA /* RequestNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestNavigator.swift; sourceTree = "<group>"; };
+		7D11E4DD2B775CE1008FDDDA /* RequestContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestContentView.swift; sourceTree = "<group>"; };
+		7D11E4DF2B775CE1008FDDDA /* TransferContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferContentView.swift; sourceTree = "<group>"; };
+		7D11E4E02B775CE1008FDDDA /* TransferNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,8 @@
 			children = (
 				7D11E4AE2B76614C008FDDDA /* Root */,
 				7D11E4BB2B766E59008FDDDA /* Home */,
+				7D11E4DE2B775CE1008FDDDA /* Transfer */,
+				7D11E4DB2B775CE1008FDDDA /* Request */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -184,8 +194,8 @@
 		7D11E4CB2B775C26008FDDDA /* Amount */ = {
 			isa = PBXGroup;
 			children = (
-				7D11E4CC2B775C26008FDDDA /* AmountReducer.swift */,
 				7D11E4CD2B775C26008FDDDA /* AmountView.swift */,
+				7D11E4CC2B775C26008FDDDA /* AmountReducer.swift */,
 			);
 			path = Amount;
 			sourceTree = "<group>";
@@ -213,6 +223,24 @@
 				7D11E4D82B775CA3008FDDDA /* ThemeColorEnvironment.swift */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		7D11E4DB2B775CE1008FDDDA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4DC2B775CE1008FDDDA /* RequestNavigator.swift */,
+				7D11E4DD2B775CE1008FDDDA /* RequestContentView.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		7D11E4DE2B775CE1008FDDDA /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E4DF2B775CE1008FDDDA /* TransferContentView.swift */,
+				7D11E4E02B775CE1008FDDDA /* TransferNavigator.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,17 +321,21 @@
 			files = (
 				7D11E49D2B765F47008FDDDA /* TCA_DemoApp.swift in Sources */,
 				7D11E4BA2B7668E4008FDDDA /* SplashReducer.swift in Sources */,
+				7D11E4E42B775CE1008FDDDA /* TransferNavigator.swift in Sources */,
 				7D11E4B82B7668DB008FDDDA /* SplashView.swift in Sources */,
+				7D11E4E12B775CE1008FDDDA /* RequestNavigator.swift in Sources */,
 				7D11E4D12B775C26008FDDDA /* ContactsView.swift in Sources */,
 				7D11E4D32B775C26008FDDDA /* AmountReducer.swift in Sources */,
 				7D11E4D42B775C26008FDDDA /* AmountView.swift in Sources */,
 				7D11E4BF2B766E8D008FDDDA /* HomeNavigatorView.swift in Sources */,
+				7D11E4E22B775CE1008FDDDA /* RequestContentView.swift in Sources */,
 				7D11E4D22B775C26008FDDDA /* ContactsReducer.swift in Sources */,
 				7D11E4B52B7662E3008FDDDA /* RootNavigatorView.swift in Sources */,
 				7D11E4C22B7676B0008FDDDA /* HomeView.swift in Sources */,
 				7D11E4D52B775C26008FDDDA /* ReasonView.swift in Sources */,
 				7D11E4BD2B766E86008FDDDA /* HomeNavigator.swift in Sources */,
 				7D11E4D62B775C26008FDDDA /* ReasonReducer.swift in Sources */,
+				7D11E4E32B775CE1008FDDDA /* TransferContentView.swift in Sources */,
 				7D11E4D92B775CA3008FDDDA /* ThemeColorEnvironment.swift in Sources */,
 				7D11E4B32B766233008FDDDA /* RootNavigator.swift in Sources */,
 				7D11E4C42B7676B6008FDDDA /* HomeReducer.swift in Sources */,

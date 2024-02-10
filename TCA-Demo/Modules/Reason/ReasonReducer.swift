@@ -23,7 +23,8 @@ struct ReasonReducer {
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            // Navigation actions are handled in the parent Navigator reducer
+            
+            // MARK: Navigation actions
             case .didSelectReason:
                 return .none
             }

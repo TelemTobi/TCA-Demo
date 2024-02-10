@@ -21,16 +21,13 @@ struct ContactsReducer {
         case didSelectContact(String)
     }
     
-    @Dependency(\.someService) var someService
-    
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                print(someService.serviceDependency ?? "nil")
                 return .none
                 
-            // Navigation actions are handled in the parent Navigator reducer
+            // MARK: Navigation actions
             case .didSelectContact:
                 return .none
             }

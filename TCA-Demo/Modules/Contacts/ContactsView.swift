@@ -19,7 +19,7 @@ struct ContactsView: View {
             Spacer()
             
             Button(
-                action: { store.send(.didSelectContact("some contact")) },
+                action: { store.send(.didSelectContact("Telem Tobi")) },
                 label: {
                     Text("Continue")
                         .bold()
