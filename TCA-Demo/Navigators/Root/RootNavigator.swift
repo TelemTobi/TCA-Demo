@@ -26,6 +26,10 @@ struct RootNavigator {
         Reduce { state, action in
             switch action {
             case .presentation(.splash(.splashCompleted)):
+                state.presentation = .login(LoginNavigator.State())
+                return .none
+                
+            case .presentation(.login(.loginCompleted)):
                 state.presentation = .home(HomeNavigator.State())
                 return .none
                 
@@ -44,18 +48,19 @@ extension RootNavigator {
         @ObservableState
         enum State: Equatable {
             case splash(SplashReducer.State)
-            case login
+            case login(LoginNavigator.State)
             case home(HomeNavigator.State)
         }
         
         enum Action {
             case splash(SplashReducer.Action)
-            case login
+            case login(LoginNavigator.Action)
             case home(HomeNavigator.Action)
         }
         
         var body: some ReducerOf<Self> {
             Scope(state: \.splash, action: \.splash, child: SplashReducer.init)
+            Scope(state: \.login, action: \.login, child: LoginNavigator.init)
             Scope(state: \.home, action: \.home, child: HomeNavigator.init)
         }
     }

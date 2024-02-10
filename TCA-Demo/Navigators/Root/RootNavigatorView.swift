@@ -20,7 +20,8 @@ extension RootNavigator {
                     .map(SplashView.init)
                 
             case .login:
-                EmptyView()
+                store.scope(state: \.presentation.login, action: \.presentation.login)
+                    .map(LoginNavigator.ContentView.init)
                 
             case .home:
                 store.scope(state: \.presentation.home, action: \.presentation.home)
